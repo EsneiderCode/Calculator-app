@@ -5,22 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+  <link id="file1" rel="stylesheet" type="text/css" href="theme1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Nanum+Gothic:wght@400;700;800&family=Outfit:wght@300&family=Quicksand:wght@300;500;700&family=Signika:wght@300&family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend| Calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+    <div class="maincontainer">
+        <div class="main">
+            <h3>Calc</h3>
+            <label for="theme">THEME</label>
+            <div class="temes">
+              <div class="ids" >
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              
+              <input id="theme" value="1" type="range" min="1" max="3" onChange=changingTheme(value)>
+            </div> 
+        </div>
+        <div class="answersection">
+          <p class="answer">0</p>
+        </div>
+        <div class="buttonssection">
+          <button type="button" onClick=numberButton(value) value= '7'>7</button>
+          <button type="button" onClick=numberButton(value) value= '8'>8</button>
+          <button type="button" onClick=numberButton(value) value= '9'>9</button>
+          <button class="delete" type="button" onClick="deleteButton()">DEL</button>
 
+          <button type="button" onClick=numberButton(value) value= '4'>4</button>
+          <button type="button" onClick=numberButton(value) value= '5'>5</button>
+          <button type="button" onClick=numberButton(value) value= '6'>6</button>
+          <button type="button" onClick=operationButton(value) value='+'>+</button>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <button type="button" onClick=numberButton(value) value= '1' >1</button>
+          <button type="button" onClick=numberButton(value)  value= '2'>2</button>
+          <button type="button" onClick=numberButton(value) value= '3' >3</button>
+          <button type="button" onClick=operationButton(value) value= '-'>-</button>
+
+          <button type="button" onClick=numberButton(value) value='.'>.</button>
+          <button type="button" onClick=numberButton(value) value= '0'>0</button>
+          <button type="button" onClick=operationButton(value) value= '/'>/</button>
+          <button type="button" onClick=operationButton(value) value= 'x'>x</button>
+
+          <button class="reset" type="button" onClick=resetButton()>RESET</button>
+          <button class="equal" type="button" onClick=equalButton()>=</button>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+    <script src="themes.js"></script>
 </body>
 </html>

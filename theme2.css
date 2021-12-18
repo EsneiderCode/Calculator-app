@@ -1,0 +1,133 @@
+body{
+    background:hsl(240, 4%, 91%);
+    padding:0;
+    margin:0;
+    font-family: 'Spartan', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:white;
+    font-size:14px;
+    
+}
+.maincontainer{
+    width:420px;
+    height: 550px;
+    background:hsl(0, 0%, 90%);
+    padding:14px;
+    border-radius: 6px;
+   
+}
+.main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.temes{
+    display:flex;
+    flex-direction: column;
+}
+.ids{
+    display:flex;
+    justify-content: space-around;
+    user-select:none;
+}
+.main label{
+    margin-right:-64%;
+    align-self:center;  
+    font-size:8px;
+}
+.main input{
+    background-color: hsl(0, 5%, 81%);
+    -webkit-appearance: none;
+    width: 60px;
+    height: 18px;
+    border-radius: 50px;
+    align-self: center;
+    padding:0 3px 0 3px;
+}
+.main input::-webkit-slider-thumb {
+    width:12px;
+    height: 12px;
+    border-radius: 50%;
+    background:hsl(25, 98%, 40%);
+    -webkit-appearance: none;
+  }
+.answersection{
+    background:white;
+    text-align: end;
+    border-radius: 6px;
+}
+.buttonssection{
+    background:hsl(0, 5%, 81%);
+    height:376px;
+    border-radius: 6px;
+    display:grid;
+    grid-template-columns: repeat(4, 80px );
+    grid-template-rows: repeat(4,60px);
+    gap: 24px;
+    padding:14px;
+    position:relative;
+}
+button{
+    font-size:32px;
+    border-radius: 6px;
+  
+}
+.delete{
+    background:hsl(185, 58%, 25%);
+    color:white;
+    font-size:16px;
+    font-weight: 700;
+}
+.reset{
+    margin-top:-10px;
+    width:184px;
+    height:50px;
+    font-size:16px;
+    color:white;
+    background-color: hsl(185, 58%, 25%);
+    font-weight: 700;
+}
+.equal{
+    position:absolute;
+    right:14px;
+    bottom: 14px;
+    width:184px;
+    height:50px;
+    background:hsl(25, 98%, 40%);
+    color:white;
+    font-weight: 700;
+}
+.answer{
+    font-size:32px;
+    padding:20px;
+    margin:0;
+    margin-bottom:14px;
+    color: hsl(60, 10%, 19%);
+}
+
+
+@media (max-width:550px){
+    .main label{
+         margin-right:-50%;
+     }
+     .maincontainer{
+         width:300px;
+         height:510px;
+     }
+     
+     .buttonssection{
+         grid-template-columns: repeat(4, 50px );
+         grid-template-rows: repeat(4,50px);
+         height:340px;
+     }
+     .reset{
+         width:120px;
+     }
+     .equal{
+         width:120px;
+         bottom:20px;
+     }
+ }
